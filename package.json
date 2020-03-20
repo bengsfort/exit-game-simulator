@@ -1,0 +1,33 @@
+{
+  "name": "exit-game-simulator",
+  "version": "0.0.0",
+  "description": "Exit game simulator to play exit games online",
+  "main": "index.js",
+  "repository": "git@github.com:bengsfort/exit-game-simulator.git",
+  "author": "bengsfort <bengsfort@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "lint-staged": "lint-staged",
+    "lint": "node_modules/.bin/tslint -c tslint.json './src/**/**/*.ts'",
+    "lint:fix": "yarn lint --fix",
+    "format": "node_modules/.bin/prettier --write './src/**/**/*.{js,ts,json,md}'",
+    "start": "rollup -c -w",
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "@rollup/plugin-image": "^2.0.4",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
+    "prettier": "^1.19.1",
+    "rollup": "^2.1.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript2": "^0.26.0",
+    "tslib": "^1.11.1",
+    "tslint": "^6.1.0",
+    "typescript": "^3.8.3"
+  }
+}
