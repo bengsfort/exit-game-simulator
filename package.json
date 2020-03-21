@@ -15,15 +15,19 @@
     "lint:fix": "yarn lint --fix",
     "format": "node_modules/.bin/prettier --write './src/**/**/*.{js,ts,json,md}'",
     "start": "rollup -c -w",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "prebuild": "rm -rf ./build"
   },
   "devDependencies": {
     "@rollup/plugin-image": "^2.0.4",
+    "@rollup/plugin-json": "^4.0.2",
+    "@types/express": "^4.17.3",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8",
     "prettier": "^1.19.1",
     "rollup": "^2.1.0",
     "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-copy-assets": "^2.0.1",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-typescript2": "^0.26.0",
     "tslib": "^1.11.1",
