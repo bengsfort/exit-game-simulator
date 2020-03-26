@@ -7,7 +7,12 @@
   "author": "bengsfort <bengsfort@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "@types/three": "^0.103.2",
+    "bufferutil": "^4.0.1",
+    "express": "^4.17.1",
+    "three": "^0.114.0",
+    "utf-8-validate": "^5.0.2",
+    "ws": "^7.2.3"
   },
   "scripts": {
     "lint-staged": "lint-staged",
@@ -22,6 +27,7 @@
     "@rollup/plugin-image": "^2.0.4",
     "@rollup/plugin-json": "^4.0.2",
     "@types/express": "^4.17.3",
+    "@types/ws": "^7.2.3",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8",
     "prettier": "^1.19.1",
