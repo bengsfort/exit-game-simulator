@@ -1,35 +1,35 @@
 {
-    "compilerOptions": {
-      /* Basic Options */
-      "target": "es5",
-      "module": "es2015",
-      "rootDir": "./src/",
-      "composite": true,
-      "importHelpers": true,
-      "downlevelIteration": true,
-  
-      /* Strict Type-Checking Options */
-      "strict": true,
-      "noImplicitAny": true,
-      "strictNullChecks": true,
-      "strictFunctionTypes": true,
-      "strictPropertyInitialization": true,
-      "noImplicitThis": true,
-      "alwaysStrict": true,
-  
-      /* Additional Checks */
-      "noUnusedLocals": true,
-      "noUnusedParameters": true,
-      "noImplicitReturns": true,
-      "noFallthroughCasesInSwitch": true,
-  
-      "moduleResolution": "node",
-      "baseUrl": "./src/",
-      "rootDirs": ["./src/"],
-      "esModuleInterop": true,
-  
-      /* Source Map Options */
-      "sourceRoot": "./src/",
-      "inlineSourceMap": true
-    }
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "es5",
+    "module": "es2015",
+    "rootDir": "./src/",
+    "composite": true,
+    "importHelpers": true,
+    "downlevelIteration": true,
+
+    /* Strict Type-Checking Options */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+
+    /* Additional Checks */
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+
+    "moduleResolution": "node",
+    "baseUrl": "./src/",
+    "rootDirs": ["./src/"],
+    "esModuleInterop": true,
+
+    /* ` Map Options */
+    "sourceRoot": "./src/",
+    "sourceMap": true
   }
+}

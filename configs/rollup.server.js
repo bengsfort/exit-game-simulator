@@ -5,7 +5,7 @@ export default {
   input: "src/server/server.ts",
   output: {
     file: "build/server.js",
-    format: "cjs",
+    format: "commonjs",
     name: "ExitGame",
   },
   plugins: commonPlugins.concat([
