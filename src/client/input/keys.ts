@@ -1,6 +1,3 @@
-// w a s d
-// mouse move
-
 export enum Controls {
   W = "w",
   A = "a",
@@ -15,6 +12,7 @@ const keysMap: { [key: string]: boolean } = {
   d: false,
 };
 
+// keyboard event handling
 window.onkeydown = ({ key }: KeyboardEvent) => {
   if (keysMap.hasOwnProperty(key)) {
     keysMap[key] = true;

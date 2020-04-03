@@ -1,45 +1,45 @@
 {
-  "name": "e-baari",
-  "version": "0.0.0",
-  "description": "Real time virtual bar",
-  "main": "index.js",
-  "repository": "git@github.com:bengsfort/exit-game-simulator.git",
-  "author": "bengsfort <bengsfort@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "@types/three": "^0.103.2",
-    "bufferutil": "^4.0.1",
-    "express": "^4.17.1",
-    "rollup-plugin-gltf": "^2.0.0",
-    "three": "^0.114.0",
-    "utf-8-validate": "^5.0.2",
-    "ws": "^7.2.3"
-  },
-  "scripts": {
-    "lint-staged": "lint-staged",
-    "lint": "node_modules/.bin/tslint -c tslint.json './src/**/**/*.ts'",
-    "lint:fix": "yarn lint --fix",
-    "format": "node_modules/.bin/prettier --write './src/**/**/*.{js,ts,json,md}'",
-    "start": "node ./scripts/watch-dev.js",
-    "prestart": "rm -rf ./build",
-    "build": "rollup -c",
-    "prebuild": "rm -rf ./build"
-  },
-  "devDependencies": {
-    "@rollup/plugin-commonjs": "^11.0.2",
-    "@rollup/plugin-image": "^2.0.4",
-    "@rollup/plugin-json": "^4.0.2",
-    "@rollup/plugin-node-resolve": "^7.1.1",
-    "@types/express": "^4.17.3",
-    "@types/ws": "^7.2.3",
-    "husky": "^4.2.3",
-    "lint-staged": "^10.0.8",
-    "prettier": "^1.19.1",
-    "rollup": "^2.1.0",
-    "rollup-plugin-copy-assets": "^2.0.1",
-    "rollup-plugin-typescript2": "^0.26.0",
-    "tslib": "^1.11.1",
-    "tslint": "^6.1.0",
-    "typescript": "^3.8.3"
-  }
+    "name": "e-baari",
+    "version": "0.0.0",
+    "description": "Real time virtual bar",
+    "main": "index.js",
+    "repository": "git@github.com:bengsfort/exit-game-simulator.git",
+    "author": "bengsfort <bengsfort@gmail.com>",
+    "license": "MIT",
+    "dependencies": {
+        "@types/three": "^0.103.2",
+        "bufferutil": "^4.0.1",
+        "express": "^4.17.1",
+        "rollup-plugin-gltf": "^2.0.0",
+        "three": "^0.114.0",
+        "utf-8-validate": "^5.0.2",
+        "ws": "^7.2.3"
+    },
+    "scripts": {
+        "lint-staged": "lint-staged",
+        "lint": "node_modules/.bin/tslint -c tslint.json 'src/**/**/*.ts'",
+        "lint:fix": "yarn lint --fix",
+        "format": "node_modules/.bin/prettier --write 'src/**/**/*.ts'",
+        "start": "node ./scripts/watch-dev.js",
+        "prestart": "rm -rf ./build",
+        "build": "rollup -c",
+        "prebuild": "rm -rf ./build"
+    },
+    "devDependencies": {
+        "@rollup/plugin-commonjs": "^11.0.2",
+        "@rollup/plugin-image": "^2.0.4",
+        "@rollup/plugin-json": "^4.0.2",
+        "@rollup/plugin-node-resolve": "^7.1.1",
+        "@types/express": "^4.17.3",
+        "@types/ws": "^7.2.3",
+        "husky": "^4.2.3",
+        "lint-staged": "^10.0.8",
+        "prettier": "^1.19.1",
+        "rollup": "^2.1.0",
+        "rollup-plugin-copy-assets": "^2.0.1",
+        "rollup-plugin-typescript2": "^0.26.0",
+        "tslib": "^1.11.1",
+        "tslint": "^6.1.0",
+        "typescript": "^3.8.3"
+    }
 }
