@@ -15,10 +15,11 @@ app.use("/", express.static(join(__dirname, "public")));
 const server = app.listen(port, () =>
   console.log(`Server up and running on ${port}`)
 );
-const wss = new WebSocket.Server({ server });
 
+const wss = new WebSocket.Server({ server });
 wss.on("connection", ws => {
+  console.log("Connection started.");
   ws.on("open", () => console.log("Connection opened"));
-  ws.on("message", data => console.log("Message from client:", data));
+  ws.on("message", data => console.log("Message from client incoming:", data));
   ws.send("Connected.");
 });

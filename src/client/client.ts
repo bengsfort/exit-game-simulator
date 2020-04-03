@@ -1,45 +1,37 @@
-import {
-  Scene,
-  PerspectiveCamera,
-  WebGLRenderer,
-  BoxGeometry,
-  MeshBasicMaterial,
-  Mesh,
-} from "three";
-
-const scene = new Scene();
-const camera = new PerspectiveCamera(
-  75,
-  window.innerWidth / window.innerHeight,
-  0.1,
-  1000
-);
+import { WebGLRenderer } from "three";
+import { testScene } from "./scenes";
 
 const renderer = new WebGLRenderer();
-
 renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(window.devicePixelRatio);
 document.body.appendChild(renderer.domElement);
 
-const geometry = new BoxGeometry();
-const material = new MeshBasicMaterial({ color: 0x00ff00 });
-const cube = new Mesh(geometry, material);
-scene.add(cube);
+const renderTick = renderer.render.bind(renderer);
+const scene = testScene();
 
-camera.position.z = 5;
+// Setup global event handling
+window.addEventListener("resize", () => {
+  const camera = scene.getActiveCamera();
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
+
+// Pointer lock handling
+renderer.domElement.addEventListener("click", () => {
+  console.log("Requesting pointer lock...");
+  renderer.domElement.requestPointerLock();
+});
+document.addEventListener("pointerlockchange", () => {
+  if (document.pointerLockElement === renderer.domElement) {
+    console.log("Pointer locked.");
+  } else {
+    console.log("Pointer unlocked.");
+  }
+});
 
 function animate() {
   window.requestAnimationFrame(animate);
-
-  cube.rotation.x += 0.01;
-  cube.rotation.y += 0.01;
-
-  renderer.render(scene, camera);
+  scene.update(renderTick);
 }
 animate();
-
-const websocket = new WebSocket("/");
-websocket.onopen = ev => {
-  console.log("connected!", ev);
-  setTimeout(() => websocket.send("hellooooo"), 2500);
-};
-websocket.onmessage = ev => console.log("message from srv:", ev);
