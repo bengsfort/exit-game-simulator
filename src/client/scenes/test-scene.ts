@@ -1,4 +1,4 @@
-import { Scene, AmbientLight, PerspectiveCamera } from "three";
+import { Scene, HemisphereLight, PerspectiveCamera } from "three";
 import { GLTFLoader } from "../loaders/GLTFLoader";
 import { blockout } from "../assets";
 import { RenderCallback } from "client/types";
@@ -13,16 +13,31 @@ export function testScene() {
         0.1,
         1000
     );
+    const light = new HemisphereLight(0xffffff, 0x444444);
+
     const cameraMovement = fpCamera(camera);
 
     loader.parse(blockout, "", gltf => {
         gltf.scene.position.set(0, 0, 0);
+        gltf.scene.traverse(obj => {
+            if (obj.name === "Spawn") {
+                camera.position.set(
+                    obj.position.x,
+                    obj.position.y + 4,
+                    obj.position.z
+                );
+            }
+            if (obj.name === "Light") {
+                light.position.set(
+                    obj.position.x,
+                    obj.position.y,
+                    obj.position.z
+                );
+            }
+        });
         scene.add(gltf.scene);
     });
 
-    camera.position.set(-11, 24, 2);
-
-    const light = new AmbientLight(0x404040);
     scene.add(light);
 
     return {

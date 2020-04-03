@@ -1,10 +1,12 @@
-import { WebGLRenderer } from "three";
+import { WebGLRenderer, sRGBEncoding } from "three";
 import { testScene } from "./scenes";
 import { setMouseCaptureEl, inputTick } from "./input";
 
 const renderer = new WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
+renderer.outputEncoding = sRGBEncoding;
+renderer.gammaFactor = 2.2;
 document.body.appendChild(renderer.domElement);
 
 const renderTick = renderer.render.bind(renderer);

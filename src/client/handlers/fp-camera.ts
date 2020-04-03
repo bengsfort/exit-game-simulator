@@ -49,6 +49,7 @@ export function fpCamera(camera: PerspectiveCamera) {
     }
 
     function updatePosition() {
+        const lockedY = camera.position.y;
         if (keyDown(Controls.W)) {
             movementDirection.add(MOVEMENT_DIRECTIONS[Directions.Forward]);
         } else if (keyDown(Controls.S)) {
@@ -63,6 +64,7 @@ export function fpCamera(camera: PerspectiveCamera) {
         const movementSpeed = DEFAULT_DELTA * DEFAULT_WALKING_SPEED;
         camera.translateX(movementDirection.x * movementSpeed);
         camera.translateZ(movementDirection.z * movementSpeed);
+        camera.position.y = lockedY;
         movementDirection.set(0, 0, 0);
     }
 
