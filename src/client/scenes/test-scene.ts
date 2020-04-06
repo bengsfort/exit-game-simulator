@@ -2,7 +2,7 @@ import { Scene, HemisphereLight, PerspectiveCamera } from "three";
 import { GLTFLoader } from "../loaders/GLTFLoader";
 import { blockout } from "../assets";
 import { RenderCallback } from "client/types";
-import { fpCamera } from "client/handlers/fp-camera";
+import { fpCamera } from "client/entities/fp-camera";
 
 export function testScene() {
     const loader = new GLTFLoader();

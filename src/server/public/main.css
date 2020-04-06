@@ -122,3 +122,9 @@ body {
     outline: none !important;
     cursor: pointer;
 }
+
+#submit-button:disabled {
+    cursor: default;
+    color: #ebebeb;
+    background: rgba(248, 248, 248, 0.7);
+}

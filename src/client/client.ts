@@ -1,6 +1,7 @@
 import { WebGLRenderer, sRGBEncoding } from "three";
 import { testScene } from "./scenes";
 import { setMouseCaptureEl, inputTick } from "./input";
+import { initForm } from "./name-form";
 
 const renderer = new WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -22,6 +23,8 @@ window.addEventListener("resize", () => {
 
 // Pointer lock handling
 setMouseCaptureEl(renderer.domElement);
+
+initForm();
 
 function animate() {
     window.requestAnimationFrame(animate);
