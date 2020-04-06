@@ -1,45 +1,124 @@
 html,
 body {
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  font-family: sans-serif;
-  overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: sans-serif;
+    overflow: hidden;
 }
 
 /** Debug mouse cursor */
 #cursor {
-  position: absolute;
-  z-index: 9999;
-  width: 1rem;
-  height: 1rem;
-  background-color: red;
-  border-radius: 1rem;
+    position: absolute;
+    z-index: 9999;
+    width: 1rem;
+    height: 1rem;
+    background-color: red;
+    border-radius: 1rem;
 }
 
 /** Controls */
 #controls {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  padding: 0.45rem;
-  color: #f8f8f8;
-  border-radius: 0.45rem;
-  background: rgba(80, 88, 99, 0.75);
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.45rem;
+    color: #f8f8f8;
+    border-radius: 0.45rem;
+    background: rgba(80, 88, 99, 0.75);
 }
 
 #controls h2 {
-  margin: 0 0 0.5rem;
-  font-size: 1.15rem;
-  text-align: center;
+    margin: 0 0 0.5rem;
+    font-size: 1.15rem;
+    text-align: center;
 }
 
 #controls ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 #controls li {
-  padding-left: 0;
+    padding-left: 0;
+}
+
+/** Name input form */
+#connect-form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #2b2b2b;
+    color: #fff;
+}
+
+#connect-form .wrapper {
+    width: 100%;
+    max-width: 35rem;
+    margin: 5rem auto;
+}
+
+#connect-form h1 {
+    text-align: center;
+}
+
+#user-info label {
+    visibility: hidden;
+}
+
+.lead {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#name-input {
+    font-size: 1.1rem;
+    background: rgb(80, 88, 99);
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border: 1px solid transparent;
+    border-right: none;
+    padding: 0.795rem;
+    color: #f8f8f8;
+    outline: none !important;
+}
+
+#name-input::placeholder {
+    font-size: 1.1rem;
+    color: #9a9a9a;
+}
+
+#name-input.success {
+    border: 1px solid forestgreen;
+    border-right: none;
+}
+
+#name-input.error {
+    border: 1px solid crimson;
+    border-right: none;
+}
+
+#submit-button {
+    font-size: 1.1rem;
+    background: #f8f8f8;
+    border: 1px solid #f8f8f8;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border: 0;
+    padding: 0.795rem;
+    color: rgb(80, 88, 99);
+    outline: none !important;
+    cursor: pointer;
 }
