@@ -9,7 +9,7 @@
     "dependencies": {
         "@types/three": "^0.103.2",
         "bufferutil": "^4.0.1",
-        "express": "^4.17.1",
+        "express": "^4.17.3",
         "rollup-plugin-gltf": "^2.0.0",
         "three": "^0.114.0",
         "utf-8-validate": "^5.0.2",
